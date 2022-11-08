@@ -48,7 +48,7 @@ if (isset($_POST['submit'])){
     $description = $_POST['description'];
     $file = $_FILES["fileToUpload"];
 
-    $target_dir = "uploads/";
+    $target_dir = "uploads/dishes/";
 
     if (checkforActualImage($file) && checkforSize($file,5000000) && checkforImage($file)) {
 
