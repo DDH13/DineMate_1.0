@@ -17,10 +17,10 @@ class Dish extends Dbh{
         return $results;
     }
 
-    protected function setDish($name, $preptime, $netprice, $sellprice, $description){
-        $sql = "INSERT INTO dishes (name, prepTime, netPrice, sellingPrice, description) VALUES (?,?,?,?,?)";
+    protected function setDish($name, $preptime, $netprice, $sellprice, $description, $image_url){
+        $sql = "INSERT INTO dishes (name, prepTime, netPrice, sellingPrice, description, image_url) VALUES (?,?,?,?,?,?)";
         $stmt = $this->connect()->prepare($sql);
-        if (!$stmt->execute([$name, $preptime, $netprice, $sellprice, $description])){
+        if (!$stmt->execute([$name, $preptime, $netprice, $sellprice, $description, $image_url])){
             $stmt = null;
             header('Location: ../../NewDish.php?error=stmtfailed');
             exit();

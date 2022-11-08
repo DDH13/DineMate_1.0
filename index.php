@@ -39,12 +39,14 @@ session_start();
             if(isset($_SESSION['username'])){
                 echo "<h1>Welcome, " . $_SESSION['username'] . "</h1>";
                 echo "<a href='includes/auth/logout.inc.php'>Logout</a>";
+                echo "<br><a href='securepage.php'>SecurePage</a>";
             }
             else{
                 echo "<h1>Welcome, Guest</h1>";
             }
             ?>
 </div>
+
 <?php
 if(!isset($_SESSION['username'])){?>  
 

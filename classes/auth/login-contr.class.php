@@ -29,5 +29,4 @@ class Logincontr extends Login{
         return $result;
     }
 
-
 }
