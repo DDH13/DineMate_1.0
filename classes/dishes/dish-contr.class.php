@@ -3,7 +3,7 @@ class DishContr extends Dish{
 
     public function addDish($name, $preptime, $netprice, $sellprice, $description, $image_url){
         if($this->emptyInput($name, $preptime, $netprice, $sellprice) !== false){
-            header('Location: ../../NewDish.php?error=emptyinput');
+            header('Location: /DineMate/NewDish.php?error=emptyinput');
             exit();
         }
         $this->setDish($name, $preptime, $netprice, $sellprice, $description, $image_url);

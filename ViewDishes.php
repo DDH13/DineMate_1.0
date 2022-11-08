@@ -27,6 +27,8 @@
 
     <table>
         <tr>
+            <th>Dish ID</th>
+            <th>Picture</th>
             <th>Name</th>
             <th>Preparation Time</th>
             <th>Net Price</th>
@@ -35,8 +37,8 @@
         </tr>
         <?php foreach ($results as $result) { ?>
             <tr>
-                <td><div class="dishpic"> <?php echo "<img src=".$result['image_url']." >";?></div></td>
                 <td><?php echo $result['dish_id']; ?></td>
+                <td><div class="dishpic"> <?php echo "<img src=".$result['image_url']." >";?></div></td>
                 <td><?php echo $result['name']; ?></td>
                 <td><?php echo $result['prepTime']; ?></td>
                 <td><?php echo $result['netPrice']; ?></td>
@@ -45,7 +47,9 @@
             </tr>
         <?php } ?>
     </table>
-
+    <br>
+    <br>
+        <a href="index.php">Index</a>
 </body>
 
 </html>

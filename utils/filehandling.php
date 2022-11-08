@@ -3,6 +3,7 @@
 // Generates a unique name for the file using timestamp
 function getFileName($path,$name,$file){
     $ext = strtolower(pathinfo($file["name"], PATHINFO_EXTENSION));
+    $name = str_replace(' ', '', $name);
     $date = new DateTime();
     $n = $date->format('Y-m-d H:i:s');
     $n = str_replace(array("-"," ",":"), "_", $n);

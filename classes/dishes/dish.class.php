@@ -22,11 +22,11 @@ class Dish extends Dbh{
         $stmt = $this->connect()->prepare($sql);
         if (!$stmt->execute([$name, $preptime, $netprice, $sellprice, $description, $image_url])){
             $stmt = null;
-            header('Location: ../../NewDish.php?error=stmtfailed');
+            header('Location: /DineMate/NewDish.php?error=stmtfailed');
             exit();
         }
         $stmt = null;
-        header('Location: ../../NewDish.php?error=none');
+        header('Location: /DineMate/ViewDishes.php');
         exit();
     }
 
