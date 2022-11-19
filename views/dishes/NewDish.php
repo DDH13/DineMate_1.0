@@ -34,10 +34,10 @@
 </html>
 
 <?php 
-include "utils/filehandling.php";
-include "./classes/dbh.class.php";
-include "./classes/dishes/dish.class.php";
-include "./classes/dishes/dish-contr.class.php";
+include "../../utils/filehandling.php";
+include "../../classes/dbh.class.php";
+include "../../classes/dishes/dish.class.php";
+include "../../classes/dishes/dish-contr.class.php";
 
 
 if (isset($_POST['submit'])){
@@ -48,7 +48,7 @@ if (isset($_POST['submit'])){
     $description = $_POST['description'];
     $file = $_FILES["fileToUpload"];
 
-    $target_dir = "uploads/dishes/";
+    $target_dir = "../../uploads/dishes/";
 
     if (checkforActualImage($file) && checkforSize($file,5000000) && checkforImage($file)) {
 
@@ -62,5 +62,5 @@ if (isset($_POST['submit'])){
 
     $dish = new DishContr();
     $dish->addDish($name, $preptime, $netprice, $sellprice, $description, $target_file);
-    header("Location: NewDish.php?success");
+    
 }

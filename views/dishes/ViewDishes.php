@@ -17,9 +17,9 @@
 
 <body>
     <?php
-    include "./classes/dbh.class.php";
-    include "./classes/dishes/dish.class.php";
-    include "./classes/dishes/dish-contr.class.php";
+    include "../../classes/dbh.class.php";
+    include "../../classes/dishes/dish.class.php";
+    include "../../classes/dishes/dish-contr.class.php";
 
     $dish = new DishContr();
     $results = $dish->viewDishes();
@@ -49,7 +49,7 @@
     </table>
     <br>
     <br>
-        <a href="index.php">Index</a>
+        <a href="../../index.php">Index</a>
 </body>
 
 </html>

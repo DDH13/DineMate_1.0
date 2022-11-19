@@ -26,7 +26,7 @@ class Dish extends Dbh{
             exit();
         }
         $stmt = null;
-        header('Location: /DineMate/ViewDishes.php');
+        header('Location: /DineMate/views/dishes/ViewDishes.php');
         exit();
     }
 

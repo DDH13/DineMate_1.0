@@ -25,9 +25,9 @@ require_once 'includes/auth/authcheck.inc.php';
     <br>
     <a href="index.php"> Go back to index </a>
     <br>
-    <a href="NewDish.php"> Add a new dish </a>
+    <a href="./views/dishes/NewDish.php"> Add a new dish </a>
     <br>
-    <a href="ViewDishes.php"> View all dishes </a>
+    <a href="./views/dishes/ViewDishes.php"> View all dishes </a>
 
     <?php
     $output = shell_exec('idk.py');
